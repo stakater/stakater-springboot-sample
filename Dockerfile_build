@@ -1,0 +1,13 @@
+############################################################
+# Dockerfile to build Springboot application
+############################################################
+FROM stakater/gradle
+
+# Create mount point
+VOLUME ["/app"]
+
+# Add code to the filesystem of the container
+ADD . /app/
+
+# Set working directory
+WORKDIR /app/

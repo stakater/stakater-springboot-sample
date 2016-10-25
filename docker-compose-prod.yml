@@ -1,0 +1,21 @@
+compile:
+  build: .
+  dockerfile: Dockerfile_build
+  volumes:
+    - /app/.gradle:/root/.gradle
+  command: gradle build
+
+test:
+  build: .
+  dockerfile: Dockerfile_build
+  volumes:
+    - /app/.gradle:/root/.gradle
+  command: gradle test
+
+app:
+  build: .
+  dockerfile: Dockerfile_build
+  volumes:
+    - /app/stakater-demo:/app/outputs/
+    - /app/.gradle:/root/.gradle
+  command: gradle deploy
