@@ -18,7 +18,7 @@ apply plugin: 'war'
 task deploy (dependsOn: war){
     copy {
         from "build/libs"
-        into "/home/hazim/s/app/outputs"
+        into "/app/outputs"
         include "*.war"
     }
 }
