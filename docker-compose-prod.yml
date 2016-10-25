@@ -16,6 +16,6 @@ app:
   build: .
   dockerfile: Dockerfile_build
   volumes:
-    - /app/stakater-demo:/app/outputs/
+    - /app/stakater_demo:/app/outputs/
     - /app/.gradle:/root/.gradle
   command: sudo gradle deploy
