@@ -18,4 +18,4 @@ app:
   volumes:
     - /app/stakater-demo:/app/outputs/
     - /app/.gradle:/root/.gradle
-  command: gradle deploy
+  command: sudo gradle deploy
